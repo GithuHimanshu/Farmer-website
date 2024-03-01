@@ -9,53 +9,12 @@
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <!-- Add Font Awesome library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
 </head>
 
 <body>
-  <header style="background-color: rgba(43, 188, 43, 0.299);">
-    <div class="logo_container">
-      <a href="#"><img class="Kissan_home" src="/static/images/l1.png" alt="Kissan Home" /></a>
-    </div>
+  {% include 'header/header.html' %}
 
-    <nav class="nav-bar">
-      <a href="">Home</a>
-      <a href="/aboutus">About</a>
-      <a href="/blogs">Blogs</a>
-      <a href="/contactus">Contact Us</a>
-      <a href="/testimonials">Testimonials</a>
-    </nav>
-    <div class="search_bar">
-      <span class="material-symbols-outlined search_icon"> search </span>
-
-      <input class="search_input" placeholder="Search for reading Blogs and Testimonials" />
-    </div>
-    <div class="action_bar">
-      <!-- Change Kia -->
-      <div class="action_container" onmouseenter="showDropdown()" onmouseenter="hideDropdown()">
-        <span class="material-symbols-outlined action_icon"> person</span>
-        <span class="action_name">Login</span>
-        <!-- Dropdown options -->
-        <div class="dropdown_options">
-          <a href="/admin" class="dropdown_item">Admin</a>
-          <a href="/login/farmerlogin" class="dropdown_item">Farmer</a>
-          <a href="/login/scholarlogin" class="dropdown_item">Scholar</a>
-        </div>
-      </div>
-      <!-- aman -->
-
-      <div class="action_container">
-        <span class="material-symbols-outlined"> dark_mode </span>
-        <span class="action_name">Dark Mode</span>
-      </div>
-    </div>
-
-    <!-- Hamburger Menu -->
-    <div class="hamburger_menu">
-      <button onclick="toggleMenu()">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
-  </header>
 
   <main>
     <div class="banner_container">
@@ -139,6 +98,17 @@
   </footer>
   <!-- javascript -->
   <script src="/static\js\index.js"></script>
+  <script>
+    // JavaScript
+    window.addEventListener('scroll', function () {
+      var header = document.querySelector('header');
+      if (window.scrollY > 200) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
 </body>
 
 </html>

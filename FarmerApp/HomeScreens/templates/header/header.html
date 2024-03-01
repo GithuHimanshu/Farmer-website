@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/header/header.css' %}">
+</head>
+
+<body>
+
+
+    <header>
+        <div class="logo_container">
+            <a href="#"><img class="Kissan_home" src="/static\images\logoimage.png" alt="Kisan  Logo image Home" /></a>
+        </div>
+
+        <nav class="nav-bar">
+            <a href="">Home</a>
+            <a href="/aboutus">About</a>
+            <a href="/blogs">Blogs</a>
+            <a href="/contactus">Contact Us</a>
+            <a href="/testimonials">Testimonials</a>
+        </nav>
+        <div class="search_bar">
+
+            <span class="material-symbols-outlined search_icon"> search </span>
+            <input class="search_input" placeholder="Search for reading Blogs and Testimonials" />
+
+        </div>
+        <div class="action_bar">
+
+            <div class="action_container" onmouseenter="showDropdown()" onmouseenter="hideDropdown()">
+                <span class="material-symbols-outlined action_icon"> person</span>
+                <span class="action_name">Login</span>
+
+                <div class="dropdown_options">
+                    <a href="/admin" class="dropdown_item">Admin</a>
+                    <a href="/login/farmerlogin" class="dropdown_item">Farmer</a>
+                    <a href="/login/scholarlogin" class="dropdown_item">Scholar</a>
+                </div>
+            </div>
+
+
+            <div class="action_container dark-light">
+                <span class="material-symbols-outlined"> dark_mode </span>
+                <span class="action_name ">Dark Mode</span>
+            </div>
+        </div>
+
+
+        <div class="hamburger_menu">
+            <button onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    <script>
+        const body = document.querySelector("body"),
+            nav = document.querySelector("nav"),
+            modeToggle = document.querySelector(".dark-light");
+
+
+
+
+        let getMode = localStorage.getItem("mode");
+        if (getMode && getMode === "dark-mode") {
+            body.classList.add("dark");
+        }
+
+        // js code to toggle dark and light mode
+        modeToggle.addEventListener("click", () => {
+            modeToggle.classList.toggle("active");
+            body.classList.toggle("dark");
+
+            // js code to keep user selected mode even page refresh or file reopen
+            if (!body.classList.contains("dark")) {
+                localStorage.setItem("mode", "light-mode");
+            } else {
+                localStorage.setItem("mode", "dark-mode");
+            }
+        });
+
+        // js code to toggle search box
+        searchToggle.addEventListener("click", () => {
+            searchToggle.classList.toggle("active");
+        });
+
+
+        //   js code to toggle sidebar
+        sidebarOpen.addEventListener("click", () => {
+            nav.classList.add("active");
+        });
+
+
+    </script>
+</body>
+
+</html>
