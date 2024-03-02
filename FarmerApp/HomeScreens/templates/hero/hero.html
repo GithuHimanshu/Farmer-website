@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero</title>
+    <link rel="stylesheet" href="{% static 'css/hero/hero.css' %}">
+</head>
+
+<body>
+    <section class="hero-section">
+        <article class="hero-article">
+            <div class="main-hero-article">
+                <div class="hero-article-heading">
+                    <h1 class="main-heading">
+                        Empowering farmers
+                    </h1>
+                    <h3 class="sub-heading">
+                        Solve your formal problems with ease
+                    </h3>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-info-inside">
+                        <a class="contact" target="_self">
+                            Contact us
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="hero-video-section">
+                <video
+                    src="https://player.vimeo.com/external/470047424.sd.mp4?s=eb4eae0cb6d494dbb61a0e62a19de1c7ccadbab0&amp;profile_id=165&amp;oauth2_token_id=57447761"
+                    autoPlay playsinline loop muted style="z-index:1;object-fit:cover" class="video-link"
+                    data-bgvideo="true"
+                    poster="https://images.pexels.com/videos/5646602/agricultural-agricultural-land-people-in-agriculture-video-of-agriculture-seed-5646602.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=630&amp;w=1200"></video>
+                <div style="z-index:2;background-color:rgba(53,59,47,.35)" class="down"></div>
+            </div>
+        </article>
+    </section>
+</body>
+
+</html>
