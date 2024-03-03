@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{% static 'css/header/header.css' %}">
+    <style>
+
+    </style>
 </head>
 
 <body>
@@ -18,24 +21,27 @@
         </div>
 
         <nav class="nav-bar">
-            <a href="">Home</a>
-            <a href="/aboutus">About</a>
-            <a href="/blogs">Blogs</a>
-            <a href="/contactus">Contact Us</a>
-            <a href="/testimonials">Testimonials</a>
+
+            <ul class="nav-links">
+                <li><a href="">Home</a></li>
+                <li><a href="#"> About</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+                <li><a href="/contactus"> Contact</a></li>
+                <li><a href="/testimonials">Testimonials</a></li>
+            </ul>
         </nav>
         <div class="search_bar">
 
             <span class="material-symbols-outlined search_icon"> search </span>
-            <input class="search_input" placeholder="Search for reading Blogs and Testimonials" />
+            <input class="search_input" placeholder="Search Blogs and Testimonials" />
 
         </div>
         <div class="action_bar">
 
             <div class="action_container" onmouseenter="showDropdown()" onmouseenter="hideDropdown()">
-                <span class="material-symbols-outlined action_icon"> person</span>
-                <span class="action_name">Login</span>
 
+                <span class="action_name">Login</span>
+                <span class="material-symbols-outlined action_icon"> person</span>
                 <div class="dropdown_options">
                     <a href="/admin" class="dropdown_item">Admin</a>
                     <a href="/login/farmerlogin" class="dropdown_item">Farmer</a>
@@ -45,8 +51,9 @@
 
 
             <div class="action_container dark-light">
-                <span class="material-symbols-outlined"> dark_mode </span>
+
                 <span class="action_name ">Dark Mode</span>
+                <span class="material-symbols-outlined"> dark_mode </span>
             </div>
         </div>
 
